@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<!-- DBCP를 위한 DB연결설정 -->
+<Resource name="jdbc/Maria" auth="Container" type="javax.sql.DataSource" 
+      driverClassName="org.mariadb.jdbc.Driver"
+      loginTimeout="10" maxWait="5000"  username="admin"  password="1234"  testOnBorrow="true"
+      maxIdle="30" maxActive="100"
+   url="jdbc:mysql://localhost:3306/jwwork" /> 
+</Context>
