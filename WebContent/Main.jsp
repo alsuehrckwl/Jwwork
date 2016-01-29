@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     
 <!-- jstl library load -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -7,9 +7,10 @@
 <%@ include file="view/layout/header.jsp" %>
 <%@ include file="view/layout/nav.jsp" %>
 
-<!-- jstl¸¦ ÀÌ¿ëÇÏ±â  sessionScope ¾È¿¡ loginÀÌ¶ó´Â Á¤º¸°¡ ÀÖ´Ù¸é -->
+
+<!-- jstlë¥¼ ì´ìš©í•˜ê¸°  sessionScope ì•ˆì— loginì´ë¼ëŠ” ì •ë³´ê°€ ìˆë‹¤ë©´ -->
 <c:if test="${not empty sessionScope.login }">
-		[${sessionScope.login.id}]´Ô È¯¿µ ÇÕ´Ï´Ù </br>
+		[${sessionScope.login.id}]ë‹˜ í™˜ì˜ í•©ë‹ˆë‹¤ </br>
 </c:if>
 
 </body>

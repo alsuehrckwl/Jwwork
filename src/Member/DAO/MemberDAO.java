@@ -6,13 +6,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import DBManager.DBManager;
-import Login.DTO.LoginDTO;
+import Member.DTO.MemberDTO;
 
 public class MemberDAO 
 {
 
 	
-	public static boolean insertMember(LoginDTO data)
+	public static boolean insertMember(MemberDTO data)
 	{
 		boolean result = false;
 		
@@ -22,12 +22,14 @@ public class MemberDAO
 		
 		StringBuffer SQL = new StringBuffer();
 		SQL.append("Insert into member");
-		SQL.append(" values (?,?)");
+		SQL.append(" values (?,?,?,?,CURRENT_SYSDATE)");
 		
 		try{
 			pstmt=conn.prepareStatement(SQL.toString());
-			pstmt.setString(1, data.getId());
-			pstmt.setString(2, data.getPwd());
+			pstmt.setString(1, data.getMem_email());
+			pstmt.setString(2, data.getMem_pwd());
+			pstmt.setString(3, data.getMem_name());
+			pstmt.setString(4, data.getMem_cell());
 
 			int n=pstmt.executeUpdate();
 				if(n>0)

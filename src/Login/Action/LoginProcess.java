@@ -21,8 +21,9 @@ public class LoginProcess implements ServiceInterface{ // 로그인을 처리하는 클래
 		ServiceForward Fowardaction = new ServiceForward();
 		
 		// eamil pwd 구별
-		String mem_email 		= request.getParameter("mem_email");
-		String mem_pwd 	= request.getParameter("mem_pwd");
+		String mem_email = request.getParameter("mem_email");
+		String mem_pwd   = request.getParameter("mem_pwd");
+		
 		
 		//사용자 객체 만들기
 		LoginDTO data = new LoginDTO(mem_email,mem_pwd);

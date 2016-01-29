@@ -1,7 +1,7 @@
 <%@page import="Login.Action.LoginProcess"%>
 <%@page import="Logout.Controller.LogoutController"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <!-- jstl library load -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
@@ -20,22 +20,22 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-          	<li class="active"><a href="#">Home</a>
-          	<li><a href="#">page1</a>
-          	<li><a href="#">page2</a>
+          	<li class="active"><a href="content.do?cmd=content_001">Home</a>
+          	<li><a href="login.do?cmd=loginForm">page1</a>
+          	<li><a href="login.do?cmd=loginForm">page2</a>
           </ul>
           <ul class="nav navbar-nav navbar-right">
           
 <c:choose>          
    
    <c:when test="${sessionScope.login.id == null}">
-   <li><a href="login.do?cmd=loginForm">·Î±×ÀÎ</a></li>
-   <li><a href="member.do?cmd=joinForm">È¸¿ø°¡ÀÔ</a></li>
+   <li><a href="login.do?cmd=loginForm">ë¡œê·¸ì¸</a></li>
+   <li><a href="member.do?cmd=joinForm">íšŒì›ê°€ì…</a></li>
    </c:when>
    
    <c:otherwise>
-   <li><a href="logout.do?cmd=logout">·Î±×¾Æ¿ô</a></li>
-   <li><a href="member.do?cmd=joinForm">È¸¿øÁ¤º¸</a></li>
+   <li><a href="logout.do?cmd=logout">ë¡œê·¸ì•„ì›ƒ</a></li>
+   <li><a href="member.do?cmd=joinForm">íšŒì›ì •ë³´</a></li>
    </c:otherwise>
 </c:choose>
 

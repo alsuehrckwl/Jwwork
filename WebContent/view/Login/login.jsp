@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <%@ include file="../layout/header.jsp" %>
 
@@ -48,9 +48,9 @@
 			    	</div>
 			    	<div class="divider-form"></div>
     	
-					<button type="submit" class="btn-block btn btn-lg btn-primary">╥н╠вюн</button>
+					<button type="submit" class="btn-block btn btn-lg btn-primary">К║°Й╥╦Л²╦</button>
 
-					<p class="text-center">х╦©Ь╟║ют го╥╞ ╟║╠Б <a href="#">Sign in</a></p>
+					<p class="text-center">М ▄Л⌡░Й╟─Л·┘ М∙≤К÷╛ Й╟─Й╦╟ <a href="#">Sign in</a></p>
 				</form>
 			</div>
 		</div>

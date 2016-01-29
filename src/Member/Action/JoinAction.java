@@ -4,12 +4,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Login.DTO.LoginDTO;
+import Member.DTO.MemberDTO;
 import Member.DAO.MemberDAO;
 import ServiceManager.ServiceForward;
 import ServiceManager.ServiceInterface;
 
 public class JoinAction implements ServiceInterface{
+
+	
 
 	@Override
 	public ServiceForward execute(HttpServletRequest request,
@@ -19,11 +21,13 @@ public class JoinAction implements ServiceInterface{
 		ServiceForward Fowardaction = new ServiceForward();
 				
 		// email pwd 구별
-		String email = request.getParameter("email");
-		String pwd 	 = request.getParameter("pwd");
+		String mem_email = request.getParameter("mem_email");
+		String mem_pwd 	 = request.getParameter("mem_pwd");
+		String mem_name  = request.getParameter("mem_name");
+		String mem_cell  = request.getParameter("mem_cell");
 				
 		//사용자 객체 만들기
-		LoginDTO data = new LoginDTO(email,pwd);
+		MemberDTO data = new MemberDTO(mem_email, mem_pwd, mem_name, mem_cell);
 				
 		// DAO를 통해서 DB에서 처리 하기 회원 가입 처리 
 		boolean b = MemberDAO.insertMember(data);

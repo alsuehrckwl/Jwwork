@@ -37,6 +37,9 @@ public class MemberController extends HttpServlet {
 		ServiceForward 		forwardAction 	= 	null; // 단순 이동에 사용할 객체
 		ServiceInterface 	action 			=	null; // 액션이 있을때 사용할 인터페이스 객체
 		
+		request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
+	
 		//명령어 분리
 		String cmd = request.getParameter("cmd");
 		
@@ -46,7 +49,7 @@ public class MemberController extends HttpServlet {
 				//단순 이동이므로 forwardAction을 사용
 				forwardAction = new ServiceForward();
 				forwardAction.setRedirect(false);
-				forwardAction.setPath("/Member/join.jsp"); // Login폴더 안에 login.jsp로 이동 설정
+				forwardAction.setPath("view/Member/join.jsp"); // Login폴더 안에 login.jsp로 이동 설정
 			break;
 			
 			case "JoinMember" : // 회원 insert가 필요 하므로 액션
